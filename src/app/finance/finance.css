@@ -1,0 +1,246 @@
+/* ═══════════════════════════════════════════
+   LifeSeed — Finance Page Styles
+   ═══════════════════════════════════════════ */
+
+/* ── Summary Cards ── */
+.finance-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.finance-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+}
+
+.fin-icon-wrap {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fin-icon-wrap.income {
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
+}
+
+.fin-icon-wrap.expense {
+    background: rgba(248, 113, 113, 0.12);
+    color: #f87171;
+}
+
+.fin-icon-wrap.invest {
+    background: rgba(96, 165, 250, 0.12);
+    color: #60a5fa;
+}
+
+.fin-icon-wrap.balance {
+    background: rgba(167, 139, 250, 0.12);
+    color: #a78bfa;
+}
+
+.fin-summary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.fin-summary-label {
+    font-size: 0.78rem;
+    color: var(--color-text-dim);
+    font-weight: 500;
+}
+
+.fin-summary-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+}
+
+.fin-summary-value.income {
+    color: var(--color-success);
+}
+
+.fin-summary-value.expense {
+    color: var(--color-danger);
+}
+
+.fin-summary-value.invest {
+    color: var(--color-info);
+}
+
+/* ── Charts ── */
+.finance-charts-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 16px;
+}
+
+.finance-chart-card {
+    padding: 20px;
+}
+
+.chart-title {
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--color-text-primary);
+}
+
+.chart-container {
+    width: 100%;
+    min-height: 280px;
+}
+
+/* ── Portfolio Stats ── */
+.portfolio-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.portfolio-amount {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-success);
+}
+
+.portfolio-label {
+    font-size: 0.82rem;
+    color: var(--color-text-dim);
+    margin-top: 4px;
+}
+
+.portfolio-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-glass-border);
+}
+
+.portfolio-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-stat-val {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.portfolio-stat-label {
+    font-size: 0.72rem;
+    color: var(--color-text-dim);
+    margin-top: 2px;
+}
+
+/* ── Investment Table ── */
+.investment-table {
+    padding: 0;
+    overflow-x: auto;
+}
+
+.inv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.inv-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dim);
+    border-bottom: 1px solid var(--color-glass-border);
+}
+
+.inv-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-glass);
+}
+
+.inv-table tr:last-child td {
+    border-bottom: none;
+}
+
+.inv-table tr:hover td {
+    background: var(--color-glass);
+}
+
+.ticker-cell {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+}
+
+.value-cell {
+    font-weight: 600;
+    color: var(--color-success);
+}
+
+.date-cell {
+    color: var(--color-text-dim);
+    font-size: 0.82rem;
+}
+
+.asset-type-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 9999px;
+}
+
+.asset-type-badge.us-stock {
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
+}
+
+.asset-type-badge.forex {
+    background: rgba(96, 165, 250, 0.12);
+    color: #60a5fa;
+}
+
+.asset-type-badge.crypto {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+}
+
+.asset-type-badge.other {
+    background: rgba(167, 139, 250, 0.12);
+    color: #a78bfa;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .finance-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .finance-charts-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .finance-summary {
+        grid-template-columns: 1fr;
+    }
+}

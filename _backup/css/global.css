@@ -1,0 +1,220 @@
+/* ============================================
+   LifeSeed — Global Design System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+    /* Primary Colors - Enhanced with more vibrant tones */
+    --clr-primary: #10b981;
+    --clr-primary-light: #34d399;
+    --clr-primary-dark: #059669;
+    --clr-accent: #6ee7b7;
+    --clr-accent-glow: rgba(52, 211, 153, 0.5);
+    --clr-accent-bright: #a7f3d0;
+
+    /* Background - Richer gradient */
+    --clr-bg-start: #0a1f1a;
+    --clr-bg-mid: #0d3b2f;
+    --clr-bg-end: #0f2027;
+
+    /* Surface Colors - More depth */
+    --clr-surface: rgba(255, 255, 255, 0.1);
+    --clr-surface-hover: rgba(255, 255, 255, 0.15);
+    --clr-glass: rgba(255, 255, 255, 0.08);
+    --clr-glass-border: rgba(255, 255, 255, 0.15);
+    --clr-glass-highlight: rgba(255, 255, 255, 0.2);
+
+    /* Text Colors */
+    --clr-text: #f0fdf4;
+    --clr-text-muted: #a5b4c7;
+    --clr-text-dim: #6b7c93;
+
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+    --radius-full: 9999px;
+
+    /* Shadows - Enhanced depth */
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 25px 70px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 50px var(--clr-accent-glow);
+    --shadow-glow-strong: 0 0 70px rgba(52, 211, 153, 0.6);
+
+    /* Typography */
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+
+    /* Transitions - Smoother curves */
+    --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-slow: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--clr-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    /* Deep nature gradient */
+    background: linear-gradient(135deg,
+            var(--clr-bg-start) 0%,
+            var(--clr-bg-mid) 50%,
+            var(--clr-bg-end) 100%);
+}
+
+/* ---------- Animated Background Orbs ---------- */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--clr-primary-light), transparent 70%);
+    top: -10%;
+    right: -5%;
+    animation: float-orb 12s ease-in-out infinite alternate;
+}
+
+body::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--clr-accent), transparent 70%);
+    bottom: -10%;
+    left: -5%;
+    animation: float-orb 15s ease-in-out infinite alternate-reverse;
+}
+
+/* ---------- Shared Animations ---------- */
+@keyframes float-orb {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(40px, -30px) scale(1.15) rotate(5deg);
+    }
+
+    66% {
+        transform: translate(-30px, 20px) scale(0.9) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 25px var(--clr-accent-glow),
+            0 0 50px rgba(52, 211, 153, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 50px var(--clr-accent-glow),
+            0 0 80px rgba(52, 211, 153, 0.3);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes slide-in-bounce {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    60% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- Utility ---------- */
+a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--clr-primary-light);
+}
+
+::selection {
+    background: var(--clr-accent);
+    color: var(--clr-primary-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-glass-border);
+    border-radius: var(--radius-full);
+}

@@ -1,0 +1,52 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/chunks/app/_not-found/page-d5211f403a329d6c.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/css/e662aa36ea1b82ea.css",
+      "static/chunks/app/layout-0a55a07007ee60b3.js"
+    ],
+    "/habits/page": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/chunks/315-175bd5799f3fd467.js",
+      "static/chunks/app/habits/page-1359df29d4ea0db5.js"
+    ],
+    "/finance/page": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/chunks/315-175bd5799f3fd467.js",
+      "static/chunks/898-08b64e2ea1d9e009.js",
+      "static/chunks/app/finance/page-02f9bf8a0d9c92e3.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/chunks/315-175bd5799f3fd467.js",
+      "static/chunks/app/page-5ce3fa8d9227137e.js"
+    ],
+    "/planner/page": [
+      "static/chunks/webpack-6e5b561c654a14de.js",
+      "static/chunks/4bd1b696-409494caf8c83275.js",
+      "static/chunks/255-091853b4155593e2.js",
+      "static/chunks/main-app-c70a94acf28595eb.js",
+      "static/chunks/315-175bd5799f3fd467.js",
+      "static/chunks/app/planner/page-ed824c716e7a1877.js"
+    ]
+  }
+}
